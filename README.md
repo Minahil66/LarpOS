@@ -1,2 +1,2 @@
 # LarpOS
-The name speaks for itself
+A minimal OS that reverse engineers binaries - strunctured with dsa concepts
