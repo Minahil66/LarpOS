@@ -1,0 +1,12 @@
+# Build output
+test_red
+test_red.exe
+*.exe
+*.o
+*.obj
+
+# Local notes and chat exports
+LarpOS.docx
+docx_dump.txt
+chat.md
+chat.txt
