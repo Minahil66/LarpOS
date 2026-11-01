@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-template <class V> //holder
+template <class V> //Holder
 class HashMap {
 private:
     enum { EMPTY, FULL, DELETED }; 
