@@ -13,7 +13,7 @@ private:
     vector<unsigned long long> keys;
     vector<V> values;
     vector<int> state;
-    int capacity;     // number of slots 
+    int capacity;     // total number of slots 
     int count;        // FULL slots
     int usedSlots;    // FULL + DELETED slots
 
