@@ -1,4 +1,4 @@
-// Canvas.h : an in-memory "screen". Draw into a grid of cells, then print once.
+// Canvas: A grid in memory. Draw into a grid of cells, then print once.
 // Each cell holds one symbol (a string, because box characters are UTF-8) and a color.
 #ifndef CANVAS_H
 #define CANVAS_H
@@ -32,10 +32,6 @@ public:
         cell.assign(width * height, " ");
         color.assign(width * height, COLOR_NONE);
     }
-	//getters
-    int getWidth()  { return width; }
-    int getHeight() { return height; }
-
     // what symbol is at (x, y)? 
     string symbolAt(int x, int y) {
         if (!inside(x, y)) return " "; //blank if outside
@@ -79,32 +75,22 @@ public:
             for (int i = 1; i < w - 1; i++)      // blank inside, so arrows behind the box vanish
                 put(x + i, y + r, " ", c);
         }
-        int room = w - 4;
-        if (room < 0) room = 0;
-        text(x + 2, y + 1, label.substr(0, room), c);
+        text(x + 2, y + 1, label.substr(0, w-4 ), c);
     }
 
     // build the whole picture as one string (colored or plain)
-    string toString(bool useColor = true) {
-        string out;
-        for (int y = 0; y < height; y++) {
-            int last = width - 1;                       // start at right end
-            while (last >= 0 && cell[y * width + last] == " ") last--;
-            for (int x = 0; x <= last; x++) {
+    void print(bool useColor = true) {
+        for (int y = 0; y < height; y++) {                     // start at right end
+            for (int x = 0; x < width; x++) {
                 const string& s = cell[y * width + x];
                 int c = color[y * width + x];
                 if (useColor && c != COLOR_NONE)
-                    out += "\033[" + to_string(c) + "m" + s + "\033[0m";   // code, symbol, reset
+                    cout << "\033[" << c << "m" << cell[y * width + x] << "\033[0m";   // code, symbol, reset
                 else
-                    out += s;
+                    cout << cell[y * width + x];
             }
-            out += "\n";
+            cout<<endl;
         }
-        return out;
-    }
-
-    void print(bool useColor = true) {
-        cout << toString(useColor);
     }
 };
 
