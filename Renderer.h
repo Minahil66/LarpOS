@@ -1,5 +1,5 @@
 
-// Renderer.h : draws blocks and loops as boxes and arrows
+// Renderer : draws blocks and loops as boxes and arrows
 // DSA: BFS (layout), HashMap (lookups), LRU cache (positions)
 #ifndef RENDERER_H
 #define RENDERER_H
