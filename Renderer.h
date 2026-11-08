@@ -148,7 +148,7 @@ public:
                 if (!indexOf.get(blocks[u].successor[k], v)) continue;
                 if (layerOf[v] != -1 && layerOf[v] <= layerOf[u]) {
                     canvas.text(p.x + 2, p.y + 2, ("<- " + hex(blocks[u].successor[k])).substr(0, BOX_W - 4), c);
-                    break;                                   // only the first back-edge
+                    break;                                   
                 }
             }
         }
