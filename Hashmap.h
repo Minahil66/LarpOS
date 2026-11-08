@@ -111,6 +111,20 @@ public:
         count--;
         return true;
     }
+    int size()        { return count; }
+    bool isEmpty()    { return count == 0; }
+    int getCapacity() { return capacity; }
+
+    // a translaor to translate address to integers
+    void get_all_keys(std::vector<unsigned long long>& out_keys) {
+        for (int i = 0; i < capacity; i++) {
+            if (state[i] == FULL) {
+                out_keys.push_back(keys[i]);
+            }
+        }
+    }
+
+    void display() {
 
     int size()        { return count; }
     bool isEmpty()    { return count == 0; }
