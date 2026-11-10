@@ -1,5 +1,5 @@
 // demo_renderer: 4 mock graphs
-#include "../src/Renderer.h"
+#include "Renderer.h"
 
 typedef unsigned long long u64;
 
