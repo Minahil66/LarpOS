@@ -1,5 +1,5 @@
 #include <cassert>
-#include "../src/Renderer.h"
+#include "Renderer.h"
 
 typedef unsigned long long u64; //vector<unsigned long long>{0x1010}  ==   vector<u64>{0x1010}
 
