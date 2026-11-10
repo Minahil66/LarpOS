@@ -8,7 +8,7 @@
 #include <sstream> //used to write 0x4010
 #include "Hashmap.h"
 #include "LRU.h"
-#include "GraphData.h"
+#include "Graphdata.h"
 #include "Canvas.h"
  
 class Renderer {
