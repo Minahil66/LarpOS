@@ -1,16 +1,8 @@
 <div align="center">
 
-<div align="center">
-  
-  <h1>
-    <img src="https://readme-typing-svg.demolab.com?font=VT323&weight=900&size=80&pause=1000&color=00FFFF&center=true&vCenter=true&width=600&lines=LARP+OS" alt="LARP OS" style="filter: drop-shadow(0 0 10px #00ffff) drop-shadow(0 0 20px #ff00ff); mix-blend-mode: screen;">
-  </h1>
+#  LARP OS
+**A Minimalist, Offline Reverse-Engineering Operating System**
 
-  <p>
-    <img src="https://readme-typing-svg.demolab.com?font=VT323&size=30&pause=1000&color=FF00FF&center=true&vCenter=true&width=600&lines=Offline+Reverse+Engineering;Data+Structures+%26+Algorithms" alt="Subtitle" style="filter: drop-shadow(0 0 5px #ff00ff);">
-  </p>
-
-</div>
 [![License: Custom](https://img.shields.io/badge/License-Custom%20Artistic-red.svg)](#-license--credits)
 [![Language: C++](https://img.shields.io/badge/Language-C%2B%2B17-orange.svg)]()
 [![OS: Buildroot](https://img.shields.io/badge/OS-Custom%20Buildroot-green.svg)]()
