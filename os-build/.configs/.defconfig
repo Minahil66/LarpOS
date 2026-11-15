@@ -1,0 +1,38 @@
+#
+# Automatically generated file; DO NOT EDIT.
+# Buildroot 2026.08 Configuration
+#
+BR2_HAVE_DOT_CONFIG=y
+
+#
+# Target options
+#
+# BR2_arcle is not set
+# BR2_arm is not set
+# BR2_armeb is not set
+BR2_aarch64=y
+# BR2_aarch64_be is not set
+# BR2_hppa is not set
+# BR2_i386 is not set
+# BR2_loongarch64 is not set
+# BR2_m68k is not set
+# BR2_microblazeel is not set
+# BR2_microblazebe is not set
+# BR2_mips is not set
+# BR2_mipsel is not set
+# BR2_mips64 is not set
+# BR2_mips64el is not set
+# BR2_or1k is not set
+# BR2_powerpc is not set
+# BR2_powerpc64 is not set
+# BR2_powerpc64le is not set
+# BR2_riscv is not set
+# BR2_s390x is not set
+# BR2_sh is not set
+# BR2_sparc is not set
+# BR2_sparc64 is not set
+# BR2_x86_64 is not set
+# BR2_xtensa is not set
+BR2_ARCH_HAS_TOOLCHAIN_BUILDROOT=y
+BR2_ARCH="aarch64"
+BR2_ENDIAN="LITTLE"
