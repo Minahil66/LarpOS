@@ -13,7 +13,7 @@
 ---
 
 ## 📖 What is LARP OS?
-LARP OS (Live Action Role Play OS) is not a normal application. It is a **custom, bootable Linux distribution** built entirely from source using Buildroot. 
+LARP OS is not a normal application. It is a **custom, bootable Linux distribution** built entirely from source using Buildroot. 
 
 It boots in seconds directly into a custom C++ reverse-engineering engine. It strips away the bloat of modern operating systems (no web browsers, no window managers, no package managers) to do exactly one thing: **safely analyze Linux ELF binaries without ever executing them.**
 
