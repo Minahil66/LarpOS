@@ -114,7 +114,7 @@ The custom C++ engine, OS build scripts, and documentation for LARP OS are open-
 **Authors:**
 *   Minahil (Architect)
 *   Rubaisha (Visuals)
-*   Hasan (Math)
+*   Hasan (Math and algorithms)
 
 ---
 *This project is for educational purposes only. Do not use LARP OS to execute malware on production machines.*
