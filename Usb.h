@@ -1,4 +1,5 @@
 // Usb.h - Find USB storage devices through /sys and /proc, and mount them safely (read-only, no-exec).
+//PENDING FEATURE: INCOMPLETE CODE
 #ifndef LARPOS_USB_H
 #define LARPOS_USB_H
 
