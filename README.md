@@ -9,7 +9,7 @@
 
 *Built by Minahil, Rubaisha, and Hasan.*
 
-<img src="/assets/blackhome.gif" alt="LARP OS Demo" width="600"/>
+<img src="/assets/blackhole.gif" alt="LARP OS Demo" width="600"/>
 
 </div>
 
