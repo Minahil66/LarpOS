@@ -56,15 +56,15 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
 ## Gallery
 
 <div align="center">
-  <img src="YOUR_TITLE_IMAGE.png" alt="LARP OS Boot" width="600"/>
+  <img src="/assets/title_1.png" alt="LARP OS Boot" width="600"/>
   <br>
-  <i>LARP OS booting and showing the main menu.</i>
+  <i>LARP OS boot and the main menu.</i>
 </div>
 <br>
 <div align="center">
-  <img src="YOUR_SCANNER_IMAGE.png" alt="Malware Scanner" width="600"/>
+  <img src="/assets/caution_2.png" alt="Suspecious Folder" width="600"/>
   <br>
-  <i>The Scanner detecting a malicious file on a USB drive.</i>
+  <i>The Scanner searches the mentioned folder for malicious files.</i>
 </div>
 
 ---
