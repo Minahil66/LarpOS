@@ -1,7 +1,7 @@
+//Makes basic blocks using the leader algo
 #include "graph.h"
 #include<vector>
 #include<unordered_map>
-
 
 void CFG::build_from_instruct(const std::vector<cs_insn>& instructions){
     if(instructions.empty()) return;
