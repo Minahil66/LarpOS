@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🕵️‍♂️ LARP OS
+#  LARP OS
 **A Minimalist, Offline Reverse-Engineering Operating System**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
@@ -20,22 +20,22 @@ LARP OS (Live Action Role Play OS) is not a normal application. It is a **custom
 
 It boots in seconds directly into a custom C++ reverse-engineering engine. It strips away the bloat of modern operating systems (no web browsers, no window managers, no package managers) to do exactly one thing: **safely analyze Linux ELF binaries without ever executing them.**
 
-Because it operates completely offline and statically reads raw bytes, it is perfectly safe to plug in a USB drive full of malware. LARP OS will scan it, map it, and visualize the loops without the host machine ever being at risk.
+Because it operates completely offline and statically reads raw bytes, it is perfectly safe to analyze malwares and viruses without worrying about them escaping. LARP OS will scan it, map it, and visualize the loops without the host machine ever being at risk.
 
 ---
 
-## 🧠 The Data Structures & Algorithms (DSA) Behind It
+## The Data Structures & Algorithms (DSA) Behind It
 LARP OS was built for a Data Structures & Algorithms course. Every single phase of the pipeline is powered by a custom-implemented DSA structure.
 
 | Module | File | Data Structure / Algorithm | Why it was used |
 | :--- | :--- | :--- | :--- |
-| **Graph Engine** | `graph.cpp` | **Graph (Adjacency List)** | To model the Control Flow Graph (CFG) where nodes are Basic Blocks and edges are jumps. |
-| **Graph Engine** | `graph.cpp` | **Hashmap (Open Addressing)** | To store the CFG for \(O(1)\) instant lookup of blocks by their memory address. |
-| **Math Engine** | `Dfs.cpp` | **DFS (Depth-First Search)** | To traverse the graph and generate Reverse Postorder numbering. |
-| **Math Engine** | `Dominator.cpp` | **Dominator Tree** | Uses Cooper's Algorithm to find the "boss" nodes, proving where loops exist (Back-Edges). |
-| **Math Engine** | `Heap.cpp` | **Binary Heap (Min-Heap)** | A Priority Queue to rank loops by complexity and push the most dangerous ones to the top. |
-| **Visual Engine**| `Renderer.cpp` | **BFS (Breadth-First Search)** | To calculate the X/Y grid layout so blocks are drawn side-by-side without overlapping. |
-| **Visual Engine**| `LRU.h` | **LRU Cache (DLL + Hashmap)** | To cache screen coordinates so the renderer doesn't recalculate where a block goes. |
+| **Architect** | `graph.cpp` | **Graph (Adjacency List)** | To model the Control Flow Graph (CFG) where nodes are Basic Blocks and edges are jumps. |
+| **Architect** | `graph.cpp` | **Hashmap (Open Addressing)** | To store the CFG for \(O(1)\) instant lookup of blocks by their memory address. |
+| **Math** | `Dfs.cpp` | **DFS (Depth-First Search)** | To traverse the graph and generate Reverse Postorder numbering. |
+| **Math** | `Dominator.cpp` | **Dominator Tree** | Uses Cooper's Algorithm to find the "boss" nodes, proving where loops exist (Back-Edges). |
+| **Math** | `Heap.cpp` | **Binary Heap (Min-Heap)** | A Priority Queue to rank loops by complexity and push the most dangerous ones to the top. |
+| **Visual**| `Renderer.cpp` | **BFS (Breadth-First Search)** | To calculate the X/Y grid layout so blocks are drawn side-by-side without overlapping. |
+| **Visual**| `LRU.h` | **LRU Cache (DLL + Hashmap)** | To cache screen coordinates so the renderer doesn't recalculate where a block goes. |
 | **Scanner** | `Scanner.h` | **SHA-256 & Trees** | Cryptographic hashing for known-bad files, and DFS for walking the USB directory tree. |
 
 ---
@@ -72,7 +72,7 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
 
 ---
 
-## 🚀 How to Use LARP OS (For Friends & Testers)
+##  How to Use LARP OS (For Friends & Testers)
 
 **You do NOT need to download 25 GB of source code.** You just need the final ISO.
 
@@ -91,7 +91,7 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
 
 ---
 
-## 🛠️ Building from Source (For Developers)
+##  Building from Source (For Developers)
 If you want to compile the OS yourself:
 1. Clone this repository.
 2. Download [Buildroot](https://buildroot.org/).
