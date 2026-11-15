@@ -83,7 +83,7 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
 
 ## How to Use LARP OS (For Friends & Testers)
 
-**You do NOT need to download 25 GB of source code.** You just need the final compressed OS image.
+You'll need the final compressed OS image.
 
 1. Download the `iso.zip` file directly from the releases folder in the repository.
 2. Extract the zip file. You will find two files: `bzImage` (the kernel) and `rootfs.ext2` (the OS).
