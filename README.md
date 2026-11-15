@@ -62,10 +62,22 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
 </div>
 <br>
 <div align="center">
-  <img src="/assets/caution_2.png" alt="Suspecious Folder" width="600"/>
+  <img src="/assets/caution_2.png" alt="Suspicious Folder" width="600"/>
   <br>
   <i>The Scanner searches the mentioned folder for malicious files.</i>
 </div>
+<div align="center">
+  <img src="/assets/xray_4.png" alt="Analysis of Files" width="600"/>
+  <br>
+  <i>Detailed analysis of selected ELF files.</i>
+</div>
+<div align="center">
+  <img src="/assets/CFG_3.png" alt="Control Flow Graph" width="600"/>
+  <br>
+  <i>A control flow graph of the most suspicious/complex/deep loop </i>
+</div>
+
+
 
 ---
 
