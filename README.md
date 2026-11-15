@@ -74,7 +74,7 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
 <div align="center">
   <img src="/assets/CFG_3.png" alt="Control Flow Graph" width="600"/>
   <br>
-  <i>A control flow graph of the most suspicious/complex/deep loop </i>
+  <i>A control flow graph of the most suspicious/complex/deep loop in the selected file </i>
 </div>
 
 
