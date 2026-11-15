@@ -90,7 +90,7 @@ You'll need the final compressed OS image.
 3. Install QEMU on your computer:
    * **Windows:** Download from [qemu.org](https://www.qemu.org/download/#windows).
    * **Mac:** Run `brew install qemu`.
-   * **Linux:** Run `sudo apt install qemu-system-x86`.
+   * **Linux/WSL:** Run `sudo apt install qemu-system-x86`.
 4. Open your terminal/command prompt in the folder where you extracted the files.
 5. Run this exact command to boot LARP OS:
 
