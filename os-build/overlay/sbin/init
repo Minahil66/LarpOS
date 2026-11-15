@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Mount basic filesystems
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+
+# Start hardware detection
+echo /sbin/mdev > /proc/sys/kernel/hotplug
+mdev -s
+
+clear
+echo "====================================="
+echo " LARP OS: BOOTING FILES    "
+echo "====================================="
+
+export LARPOS_UNICODE=1
+# CRITICAL FIX: Give the app a proper terminal to draw to
+#exec < /dev/tty1 > /dev/tty1 2>&1
+
+cd /opt/larpos
+
+./larp
+
+# Drop to a shell ONLY if larpos crashes
+exec /bin/sh
