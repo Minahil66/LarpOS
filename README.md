@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🕵️‍♂️ LARP OS
+#  LARP OS
 **A Minimalist, Offline Reverse-Engineering Operating System**
 
 [![License: Custom](https://img.shields.io/badge/License-Custom%20Artistic-red.svg)](#-license--credits)
