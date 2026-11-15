@@ -42,7 +42,7 @@ LARP OS was built for a Data Structures & Algorithms course. Every single phase 
 ### 1. The Virus Scanner (Triage)
 Before analyzing a file, the Scanner checks it without executing it. It looks for disguised files (a PDF that is secretly an ELF), dangerous strings (`bash -i`, `/etc/shadow`), high entropy (packed/encrypted malware), and SHA-256 hash matches against known viruses.
 
-### 2. The X-Ray (CFG)
+### 2. The X-Ray analysis (CFG)
 It uses `libelf` and the **Capstone Engine** to translate raw machine code into assembly. It chops the code into Basic Blocks and builds a map. It then uses a **Dominator Tree** to find loops. 
 
 ### 3. The Visualization (TUI Renderer)
