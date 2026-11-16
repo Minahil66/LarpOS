@@ -80,8 +80,6 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
   <i>A control flow graph of the most suspicious/complex/deep loop in the selected file </i>
 </div>
 
-
-
 ---
 
 ## How to Use LARP OS (For Friends & Testers)
