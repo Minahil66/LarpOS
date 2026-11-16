@@ -1,5 +1,7 @@
 <div align="center">
-
+<p align="center">
+  <img src="assets/larp1.png" alt="LARP OS Logo" width="150">
+</p>
 #  LARP OS
 **A Minimalist, Offline Reverse-Engineering Operating System**
 
