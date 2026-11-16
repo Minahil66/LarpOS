@@ -112,8 +112,8 @@ The dynamic black hole animation/GIF used in this README was created by **JIN2 (
 The custom C++ engine, OS build scripts, and documentation for LARP OS are open-source for educational purposes. 
 
 **Authors:**
-*   Minahil (Architect)
-*   Rubaisha (Visuals)
+*   Minahil (Architect and os build)
+*   Rubaisha (Visuals and documentation)
 *   Hasan (Math and algorithms)
 
 ---
