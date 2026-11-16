@@ -43,7 +43,7 @@ LARP OS was built for a Data Structures & Algorithms course. Every single phase 
 ## How It Works (The Pipeline)
 
 ### The Workflow
-Every file follows this path. Colours match the modules: **blue** is the Architect, **red** is the Math Module, **green** is the Visual Module.
+Every file follows this path. Colours match the modules: **blue** is the Architect, **red** is the Math Module, **green** is the Visual Module. BUILDROOT INTEGRATION NOT INCLUDED IN THE CHART.
 
 ```mermaid
 flowchart LR
