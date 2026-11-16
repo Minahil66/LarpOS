@@ -1,0 +1,3 @@
+#larpos blocklist with malware hashes
+#include 1 rn, for testing
+a873b1149ec7869b97e874e707780a61c8ad4c7d1db41b627f56e9e77ac03c4b
