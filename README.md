@@ -10,7 +10,7 @@
 [![Language: C++](https://img.shields.io/badge/Language-C%2B%2B17-orange.svg)]()
 [![OS: Buildroot](https://img.shields.io/badge/OS-Custom%20Buildroot-green.svg)]()
 
-<img src="/assets/blackhole.gif" alt="LARP OS Demo" width="600"/>
+<img src="/assets/blackhole.gif" alt="LARP OS Demo" width="700"/>
 </div>
 
 ---
