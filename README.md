@@ -1,6 +1,6 @@
 <div align="center">
 <p align="center">
-  <img src="assets/larp1.png" alt="LARP OS Logo" width="150">
+  <img src="assets/larp1.png"  width="150">
 </p>
   
 #  LARP OS
@@ -10,7 +10,7 @@
 [![Language: C++](https://img.shields.io/badge/Language-C%2B%2B17-orange.svg)]()
 [![OS: Buildroot](https://img.shields.io/badge/OS-Custom%20Buildroot-green.svg)]()
 
-<img src="/assets/blackhole.gif" alt="LARP OS Demo" width="600"/>
+<img src="/assets/blackhole.gif" alt="random animation" width="600"/>
 </div>
 
 ---
@@ -41,6 +41,67 @@ LARP OS was built for a Data Structures & Algorithms course. Every single phase 
 ---
 
 ## How It Works (The Pipeline)
+
+### The Workflow
+Every file follows this path. Colours match the modules: **blue** is the Architect, **red** is the Math Module, **green** is the Visual Module.
+
+```mermaid
+flowchart LR
+    ELF(["<b>ELF file</b>"]) --> ARCH --> MATH --> VIS
+
+    subgraph ARCH["THE ARCHITECT"]
+        direction TB
+        DIS["<b>Disasm</b><br/>translates the binary<br/>into assembly"]
+        GR["<b>Graph</b><br/>makes basic blocks<br/>with the Leader algorithm"]
+        ADJ["<b>Adjacency list</b><br/>the blocks and<br/>their jumps"]
+        DIS --> GR --> ADJ
+    end
+
+    subgraph MATH["THE MATH MODULE"]
+        direction TB
+        DFS["<b>DFS</b><br/>numbers every block in<br/>Reverse Postorder (RPO),<br/>which the dominator needs"]
+        DOM["<b>Dominator</b><br/>Cooper-Harvey-Kennedy<br/>finds who dominates whom"]
+        BACK{{"<b>Back-edge?</b><br/>does a block jump back<br/>to its own dominator?"}}
+        LOOP["<b>Loop</b><br/>mathematically defined"]
+        PLAIN["Ordinary jump,<br/>not a loop"]
+        HEAP["<b>Heap</b><br/>min-heap priority queue,<br/>ranked by complexity<br/>and depth"]
+        DFS --> DOM --> BACK
+        BACK -- yes --> LOOP --> HEAP
+        BACK -- no --> PLAIN
+    end
+
+    subgraph VIS["THE VISUAL MODULE"]
+        direction TB
+        GR2["<b>Graph</b> (once more)<br/>loops attached<br/>to the blocks"]
+        REN["<b>Renderer</b><br/>BFS layout and<br/>LRU cache for<br/>the coordinates"]
+        GR2 --> REN
+    end
+
+    classDef arch fill:#1f6feb,stroke:#0b3d91,color:#ffffff;
+    classDef math fill:#da3633,stroke:#8e1519,color:#ffffff;
+    classDef vis fill:#238636,stroke:#0f5323,color:#ffffff;
+    classDef plain fill:#6e7681,stroke:#3d444d,color:#ffffff;
+    classDef start fill:#8957e5,stroke:#4c2889,color:#ffffff;
+    class ELF start;
+    class DIS,GR,ADJ arch;
+    class DFS,DOM,BACK,LOOP,HEAP math;
+    class PLAIN plain;
+    class GR2,REN vis;
+    style ARCH fill:none,stroke:#1f6feb,stroke-width:2px;
+    style MATH fill:none,stroke:#da3633,stroke-width:2px;
+    style VIS fill:none,stroke:#238636,stroke-width:2px;
+```
+
+**Key ideas behind the diagram**
+
+| Term | What it means |
+| :--- | :--- |
+| **Leader algorithm** | Finds the first instruction of every basic block, so the flat assembly can be cut into blocks. |
+| **RPO (Reverse Postorder)** | The order in which DFS finishes the blocks, reversed. The dominator step needs it. |
+| **Dominance** | Block A dominates block B when every path to B passes through A first. In nested loops, the outer loop A dominates the inner loop B. |
+| **Back-edge** | A jump that returns to the block that dominates it. Jumps and function calls can *look* like back-edges, but only count if control returns to that dominating block. *Analogy: a recursive function without a base case.* |
+| **Loop** | If a block has an edge pointing to its own dominator, it is a mathematically defined loop. The back-edge test finds exactly these. |
+| **Heap** | Takes every loop from the dominator step and keeps them in a min-heap (priority queue), ranked by complexity and depth, so the most complex loop comes out first. |
 
 ### 1. The Virus Scanner (Triage)
 Before analyzing a file, the Scanner checks it without executing it. It looks for disguised files (a PDF that is secretly an ELF), dangerous strings (`bash -i`, `/etc/shadow`), high entropy (packed/encrypted malware), and SHA-256 hash matches against known viruses.
