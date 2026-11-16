@@ -147,7 +147,7 @@ Using a custom LRU Cache and BFS layout, it draws the graph directly to the term
 
 You'll need the final compressed OS image.
 
-1. Download the `iso.zip` file directly from the release tab.
+1. Download the `iso.zip` file directly from the releases tab.
 2. Extract the zip file. You will find two files: `bzImage` (the kernel) and `rootfs.ext2` (the OS).
 3. Install QEMU on your computer:
    * **Windows:** Download from [qemu.org](https://www.qemu.org/download/#windows).
