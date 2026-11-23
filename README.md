@@ -159,6 +159,8 @@ You'll need the final compressed OS image.
 ```bash
 qemu-system-x86_64 -m 1024 -kernel bzImage -hda rootfs.ext2 -append "root=/dev/sda console=ttyS0" -nographic
 ```
+For testing option 1 there is a folder malicious_folder which contains 4 files and 2 of them are suspicious, you can just type malicious_folder. 
+For Option 2 there is a file called FM (fake malware), you can use it for testing.
 ##  License & Credits
 
 ### Black Hole Animation (ASCII Art)
