@@ -181,4 +181,5 @@ The custom C++ engine, OS build scripts, and documentation for LARP OS are open-
 *   Hasan (Math and algorithms)
 
 ---
+*Some features and polishing is underway.* 
 *This project is for educational purposes only. Do not use LARP OS to execute malware on production machines.*
